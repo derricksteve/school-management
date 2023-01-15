@@ -30,14 +30,22 @@ public class HomeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
+		String hidden = request.getParameter("hi");
+		System.out.println(login+ " "+password+" "+hidden);
+		String message = "";
 		HttpSession session = request.getSession();
 		
 		if (!("".equals(login) || "".equals(password))) 
 		{
 			Utilisateur user = UserDao.getUtilisateur(login, password);
-			session.setAttribute("isConnected", true);
-			session.setAttribute("sessioned_user", user);
-			response.sendRedirect("dashboard");
+			if(user != null) {
+				session.setAttribute("isConnected", true);
+				session.setAttribute("sessioned_user", user);
+				response.sendRedirect("dashboard");				
+			}
+			else {
+				message = "Cet utilisateur n'existe pas";
+			}
 		}
 		else {
 			request.setAttribute("message", "Login ou mot de passe incorrect");

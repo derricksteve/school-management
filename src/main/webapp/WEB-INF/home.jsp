@@ -90,15 +90,15 @@
 
         <!-- Username & Password Login form -->
         <div class="user_login">
-            <form>
+            <form method="post">
                 <label>Email / nom d'utilisateur</label>
-                <input type="text" />
+                <input type="text" name="login"/>
                 <br />
 
                 <label>Mot de passe</label>
-                <input type="password" />
+                <input type="password" name="password"/>
                 <br />
-
+				<input type="hidden" name="hid" value="si"/>
                 <div class="checkbox">
                     <input id="remember" type="checkbox" />
                     <label for="remember">Se souvenir de moi</label>
@@ -106,7 +106,7 @@
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Retourner</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Connexion</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red"><input type="submit" value="connexion"/></a></div>
                 </div>
             </form>
 
@@ -115,17 +115,18 @@
 
         <!-- Register Form -->
         <div class="user_register">
-            <form>
+            <form method="post">
                 <label>Nom complet</label>
-                <input type="text" />
+                <input type="text" name="login"/>
                 <br />
 
                 <label>Email</label>
-                <input type="email" />
+                <input type="email" name="email"/>
                 <br />
 
                 <label>Mot de passe</label>
-                <input type="password" />
+                <input type="password" name="password"/>
+                <input type="hidden" name="hid" value="su"/>
                 <br />
 
                 <div class="action_btns">

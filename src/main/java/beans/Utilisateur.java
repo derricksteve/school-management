@@ -4,6 +4,9 @@ public class Utilisateur {
 private int id;
 private String last_name, first_name, login, password;
 private Role role;
+
+
+
 public Utilisateur(int id, String last_name, String first_name, String login, String password, Role role) {
 	super();
 	this.id = id;

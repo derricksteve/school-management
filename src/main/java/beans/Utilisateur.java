@@ -4,6 +4,7 @@ public class Utilisateur {
 private int id;
 private String lasName, firstName, login, password;
 private Role role;
+private int roleId;
 public Utilisateur(int id, String lasName, String firstName, String login, String password, Role role) {
 	super();
 	this.id = id;
@@ -12,6 +13,15 @@ public Utilisateur(int id, String lasName, String firstName, String login, Strin
 	this.login = login;
 	this.password = password;
 	this.role = role;
+}
+public Utilisateur(int id, String lasName, String firstName, String login, String password, int role) {
+	super();
+	this.id = id;
+	this.lasName = lasName;
+	this.firstName = firstName;
+	this.login = login;
+	this.password = password;
+	this.roleId = role;
 }
 public int getId() {
 	return id;

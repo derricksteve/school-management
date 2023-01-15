@@ -8,6 +8,8 @@ public class Postuler {
 	private int etat ; //accepter, refuser, en attente
 	private String motivation;
 	private Document document;
+	
+	
 	public Postuler(int id, Utilisateur utilisateur, Stage stage, String date, int etat, String motivation,
 			Document document) {
 		super();

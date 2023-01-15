@@ -3,10 +3,10 @@ package beans;
 public class Evaluation {
 	private int id;
 	private String remarque;
-	private int note;
+	private String note;
 	private Postuler postuler;
 	
-	public Evaluation(int id, String remarque, int note, Postuler postuler) {
+	public Evaluation(int id, String remarque, String note, Postuler postuler) {
 		super();
 		this.id = id;
 		this.remarque = remarque;
@@ -25,10 +25,10 @@ public class Evaluation {
 	public void setRemarque(String remarque) {
 		this.remarque = remarque;
 	}
-	public int getNote() {
+	public String getNote() {
 		return note;
 	}
-	public void setNote(int note) {
+	public void setNote(String note) {
 		this.note = note;
 	}
 	public Postuler getStage() {

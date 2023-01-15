@@ -2,13 +2,13 @@ package beans;
 
 public class Utilisateur {
 private int id;
-private String lasName, firstName, login, password;
+private String last_name, first_name, login, password;
 private Role role;
-public Utilisateur(int id, String lasName, String firstName, String login, String password, Role role) {
+public Utilisateur(int id, String last_name, String first_name, String login, String password, Role role) {
 	super();
 	this.id = id;
-	this.lasName = lasName;
-	this.firstName = firstName;
+	this.last_name = last_name;
+	this.first_name = first_name;
 	this.login = login;
 	this.password = password;
 	this.role = role;
@@ -19,17 +19,17 @@ public int getId() {
 public void setId(int id) {
 	this.id = id;
 }
-public String getLasName() {
-	return lasName;
+public String getLast_name() {
+	return last_name;
 }
-public void setLasName(String lasName) {
-	this.lasName = lasName;
+public void setLast_name(String last_name) {
+	this.last_name = last_name;
 }
-public String getFirstName() {
-	return firstName;
+public String getFirst_name() {
+	return first_name;
 }
-public void setFirstName(String firstName) {
-	this.firstName = firstName;
+public void setFirst_name(String first_name) {
+	this.first_name = first_name;
 }
 public String getLogin() {
 	return login;
@@ -49,6 +49,7 @@ public Role getRole() {
 public void setRole(Role role) {
 	this.role = role;
 }
+
 
 
 
